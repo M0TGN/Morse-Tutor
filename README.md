@@ -1,10 +1,10 @@
 
 //*******************************************************************//
-//                                                                   //
-//    M O R S E   C O D E   P R A C T I C E    G E N E R A T O R     //
-//                                                                   //
+
+      M O R S E   C O D E   P R A C T I C E    G E N E R A T O R
+
 //*******************************************************************//
-/*
+
 Author        : Dan Trudgian (M0TGN) http://www.m0tgn.com
 Date          : 14th September 2015
 Version       : 1.1
@@ -67,4 +67,3 @@ https://bitbucket.org/fmalpartida/new-liquidcrystal/downloads
 You will also need to know the address of the I2C LCD.
 Use this link to discover the address of the I2C device :
 http://playground.arduino.cc/Main/I2cScanner
-*/
