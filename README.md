@@ -18,7 +18,7 @@ It generates either letters, numbers, special characters or a mixture of both se
 
 This sketch should achieve the following requirements :
 
-  1. Generate either numbers, letters or mixed - switched selection.
+  1. Generate either numbers, letters, special characters or mixed - switched selection.
   2. Variable speed based on Variable resistor (WPM) between 8 and 34 WPM
   3. Generate 5 chars groups
   4. Allow a variable gap based on Variable Resistor between 0.5 and 4 seconds
