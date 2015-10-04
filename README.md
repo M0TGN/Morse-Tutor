@@ -8,7 +8,7 @@
 Author        : Dan Trudgian (M0TGN) http://www.m0tgn.com
 Date          : 14th September 2015
 Version       : 1.1
-Modified      : Marzogh http://chipsncode.com
+Modified      : Marzogh http://github.com/Marzogh
 Date modified : 01st October 2015
 Description   :
 
@@ -26,38 +26,38 @@ This sketch should achieve the following requirements :
 Pin Assignments :
 
 Switch
-D8 = Call signs
-D9 = Mixed
-D10 = Numbers
-D11 = Letters
-D12 = Special characters        *Added by Marzogh 01/10/2015*
+- D8 = Call signs
+- D9 = Mixed
+- D10 = Numbers
+- D11 = Letters
+- D12 = Special characters        *Added by Marzogh 01/10/2015*
 
-A0 = Used for float voltage for random seed
-A1 = Not used
-A2 = Used for Speed variations
-A3 = Used as Gap Variations
-A3 = Not Used
-A4 = Reserved for I2C LCD
-A5 = Reserved for I2C LCD
+- A0 = Used for float voltage for random seed
+- A1 = Not used
+- A2 = Used for Speed variations
+- A3 = Used as Gap Variations
+- A3 = Not Used
+- A4 = Reserved for I2C LCD
+- A5 = Reserved for I2C LCD
 
 Change log:
-1. Added the ability for mode changes to happen on Pin Change interrupts                  *Added by Marzogh 01/10/2015*
-2. Cleaned up and optimised the code - especially in the randCallsign function            *Added by Marzogh 01/10/2015*
-3. Added the ability to read special characters/ punctuation                              *Added by Marzogh 01/10/2015*
-4. Added an extra sketch to load data into EEPROM from where it is retrieved as required  *Added by Marzogh 01/10/2015*
+ 1. Added the ability for mode changes to happen on Pin Change interrupts                  *Added by Marzogh 01/10/2015*
+ 2. Cleaned up and optimised the code - especially in the randCallsign function            *Added by Marzogh 01/10/2015*
+ 3. Added the ability to read special characters/ punctuation                              *Added by Marzogh 01/10/2015*
+ 4. Added an extra sketch to load data into EEPROM from where it is retrieved as required  *Added by Marzogh 01/10/2015*
 
   
 Known Issues (Not checked/fixed from original version)
-1. Call signs can be longer than 20 chars per line
-2. WPM calculation can be slightly off at mid point 
+ 1. Call signs can be longer than 20 chars per line
+ 2. WPM calculation can be slightly off at mid point 
 
 
 To make this work you will need :
 
-1 x ATMega328 with Arduino Uno bootloader
-2 x Variable Resistors. 1K LIN
-1 x 4 way switch (or) 4 buttons
-1 x Speaker
+ - 1 x ATMega328 with Arduino Uno bootloader
+ - 2 x Variable Resistors. 1K LIN
+ - 1 x 5 way switch (or) 5 buttons
+ - 1 x Speaker
 
 You can optionally add a screen
 I use an I2C 20x4 LCD display, hence the included Library
@@ -70,8 +70,8 @@ http://playground.arduino.cc/Main/I2cScanner
 
 How to use:
 
-1. Upload the sketch EEPROMwriter.ino to your Arduino/AVR and check your serial stream to make sure no errors occur
-2. Upload the sketch MorseTutor.ino to your Arduino/AVR. If your device is built as described, it should work without any errors
+ 1. Upload the sketch EEPROMwriter.ino to your Arduino/AVR and check your serial stream to make sure no errors occur
+ 2. Upload the sketch MorseTutor.ino to your Arduino/AVR. If your device is built as described, it should work without any errors
 
 Note:
 
