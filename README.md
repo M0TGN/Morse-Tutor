@@ -67,3 +67,13 @@ https://bitbucket.org/fmalpartida/new-liquidcrystal/downloads
 You will also need to know the address of the I2C LCD.
 Use this link to discover the address of the I2C device :
 http://playground.arduino.cc/Main/I2cScanner
+
+How to use:
+
+1. Upload the sketch EEPROMwriter.ino to your Arduino/AVR and check your serial stream to make sure no errors occur
+2. Upload the sketch MorseTutor.ino to your Arduino/AVR. If your device is built as described, it should work without any errors
+
+Note:
+
+If you choose to directly program the AVR using a programmer, the fuse settings are as follows (For an AtMega328p - adapt to other MCUs):
+-U efuse:w:0x06:m -U hfuse:w:0xD6:m -U lfuse:w:0xFF:m
