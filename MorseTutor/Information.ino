@@ -9,7 +9,7 @@ Author        : Dan Trudgian (M0TGN) http://www.m0tgn.com
 Date          : 14th September 2015
 Version       : 1.1
 Modified      : Marzogh http://chipsncode.com
-Date modified : 01st October 2015
+Date modified : 04th October 2015
 Description   :
 
 This sketch is designed to emulate the Datong D70 practice oscillator.
@@ -56,7 +56,7 @@ To make this work you will need :
 
 1 x ATMega328 with Arduino Uno bootloader
 2 x Variable Resistors. 1K LIN
-1 x 4 way switch (or) 4 buttons
+1 x 5 way rotary switch (or) 5 buttons
 1 x Speaker
 
 You can optionally add a screen

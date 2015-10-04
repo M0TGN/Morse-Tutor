@@ -1,7 +1,6 @@
 void playCharacter(char x)
 {
 
-  // Orginised is a cock ass manor, quicker to search through.
   switch (x) {
     case 'E':
       dit(); printLetter(x);  break;
@@ -123,20 +122,19 @@ void dah()
 }
 
 void randCallsign() {
-
-  uint8_t pattern = random(1, 5);
-  uint8_t randLetter[5] = { random(0, 25), random(0, 25), random(0, 25), random(0, 25), random(0, 25)};
-  uint8_t randNumber = random(26, 35);
+#ifdef DEBUG
+  Serial.println(charsArray);
+#endif
 
   // patterns of callsigns to generate X0XXX XX0XXX X0XX
   // patterns of suffix to chose. /m /p & null
   // Choose a letter, a number and 3 letters to create a fake callsign.
-  switch (pattern) {
+  switch (random(1, 5)) {
     case 1:
       for (int i = 0; i < 3; i++) {
-        playCharacter(charsArray[randLetter[i]]);
+        playCharacter(charsArray[random(0, 25)]);
         if (i == 0)
-          playCharacter(charsArray[randNumber]);
+          playCharacter(random(26, 35));
       }
       delay(relaxTime);
 #ifdef DEBUG
@@ -147,9 +145,9 @@ void randCallsign() {
 
     case 2:
       for (int i = 0; i < 4; i++) {
-        playCharacter(charsArray[randLetter[i]]);
+        playCharacter(charsArray[random(0, 25)]);
         if (i == 2)
-          playCharacter(charsArray[randNumber]);
+          playCharacter(charsArray[random(26, 35)]);
       }
       delay(relaxTime);
 #ifdef DEBUG
@@ -160,9 +158,9 @@ void randCallsign() {
 
     case 3:
       for (int i = 0; i < 2; i++) {
-        playCharacter(charsArray[randLetter[i]]);
+        playCharacter(charsArray[random(0, 25)]);
         if (i == 0)
-          playCharacter(charsArray[randNumber]);
+          playCharacter(charsArray[random(26, 35)]);
       }
       delay(relaxTime);
 #ifdef DEBUG
@@ -173,9 +171,9 @@ void randCallsign() {
 
     case 4:
       for (int i = 0; i < 3; i++) {
-        playCharacter(charsArray[randLetter[i]]);
+        playCharacter(charsArray[random(0, 25)]);
         if (i == 0)
-          playCharacter(charsArray[randNumber]);
+          playCharacter(charsArray[random(26, 35)]);
       }
       playCharacter ('/');
       playCharacter ('M');
@@ -188,9 +186,9 @@ void randCallsign() {
 
     case 5:
       for (int i = 0; i < 2; i++) {
-        playCharacter(charsArray[randLetter[i]]);
+        playCharacter(charsArray[random(0, 25)]);
         if (i == 0)
-          playCharacter(charsArray[randNumber]);
+          playCharacter(charsArray[random(26, 35)]);
       }
       playCharacter ('/');
       playCharacter ('P');

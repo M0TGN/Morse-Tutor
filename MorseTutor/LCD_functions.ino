@@ -1,8 +1,8 @@
-void DisplayMode (uint8_t _wpm, float _delay , uint8_t _mode, uint8_t _xpos, uint8_t _ypos)
+void DisplayMode (float _wpm, float _delay , uint8_t _mode, uint8_t _xpos, uint8_t _ypos)
 {
   // Display Speed
   lcd.setCursor(0, 4);
-  lcd.print(_wpm);
+  lcd.print(_wpm, 0);
   lcd.print("WPM ");
 
   //Delay
@@ -26,6 +26,9 @@ void DisplayMode (uint8_t _wpm, float _delay , uint8_t _mode, uint8_t _xpos, uin
     case MODE_LETTERS:
       lcd.print ("Letters");
       break;
+    case MODE_SPECIAL:
+      lcd.print ("Special");
+      break;
   }
   lcd.setCursor(_xpos, _ypos);                      // Returns cursor to position it started from
 }
@@ -46,9 +49,9 @@ void printLetter(char x)
     lcd.clear(); // clear the screen
   }
   // Write the footer. Remember to send the cursor back to correct position.
-  DisplayMode (uint8_t(ActualWPM), float(gapSpace / 100 / 6.7), mode, ColPos, RowPos);
+  DisplayMode (ActualWPM, Delay, mode, ColPos, RowPos);
   lcd.print(x);                                         // Write data to the screen.
-  
+
 #ifdef DEBUG
   Serial.print (x); // Write something
 #endif

@@ -60,9 +60,9 @@ void updateValues()
   char outputNumbers[10];
   char outputSpecial[17];
   
-  EEPROM.writeBlock<char>(lettersAddress, letters, 26);
-  EEPROM.writeBlock<char>(numbersAddress, numbers, 10);
-  EEPROM.writeBlock<char>(specialAddress, numbers, 17);
+  EEPROM.updateBlock<char>(lettersAddress, letters, 26);
+  EEPROM.updateBlock<char>(numbersAddress, numbers, 10);
+  EEPROM.updateBlock<char>(specialAddress, special, 17);
 
   EEPROM.readBlock<char>(lettersAddress, outputLetters, 26);
   EEPROM.readBlock<char>(numbersAddress, outputNumbers, 10);
